@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #0a8fb8;">
+         <children>
+            <Label alignment="CENTER" layoutY="13.0" prefWidth="700.0" text="Coincidencia de búsqueda" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="50.0" prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #f2f2f2;">
+         <children>
+            <TableView layoutX="10.0" layoutY="19.0" prefHeight="341.0" prefWidth="675.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Fecha" />
+                <TableColumn minWidth="150.0" prefWidth="75.0" text="Número expediente" />
+                  <TableColumn minWidth="200.0" prefWidth="75.0" text="Nombre de victimas" />
+                  <TableColumn minWidth="250.0" prefWidth="75.0" text="Dirección" />
+              </columns>
+            </TableView>
+            <JFXButton layoutX="445.0" layoutY="388.0" prefHeight="31.0" prefWidth="239.0" style="-fx-background-color: #48ab2d;" text="Seleccionar como subsecuente" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="14.0" layoutY="378.0" prefHeight="50.0" prefWidth="175.0" text="Número de expediente:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="196.0" layoutY="378.0" prefHeight="50.0" prefWidth="248.0" text="-">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

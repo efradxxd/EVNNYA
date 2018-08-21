@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="572.0" prefHeight="426.0" prefWidth="765.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lesionesaparentes.FXMLDocumentController">
+    <children>
+      <Pane fx:id="panelCaptura" layoutX="35.0" layoutY="22.0" prefHeight="321.0" prefWidth="696.0">
+         <children>
+            <ImageView fitHeight="321.0" fitWidth="328.0" layoutX="363.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/nina.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="328.0" fitWidth="381.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/nino.jpg" />
+               </image>
+            </ImageView>
+            <Canvas fx:id="canvas" height="335.0" layoutX="1.0" layoutY="-14.0" width="690.0" />
+         </children>
+      </Pane>
+      <Button fx:id="btnGenerarImagen" layoutX="303.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleGenerarImagen" prefHeight="41.0" prefWidth="160.0" text="Button" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="evnnya_recepcion.FXMLRecepcionController">
+   <children>
+      <Pane fx:id="pnlFicha" layoutX="246.0" prefHeight="650.0" prefWidth="854.0" style="-fx-background-color: #F2F2F2;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="57.0" prefHeight="31.0" prefWidth="814.0" text="Ficha de atención" textFill="#0a8fb8">
+               <font>
+                  <Font name="Century Gothic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="210.0" text="Calle:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtEdad" focusColor="#0a8fb8" labelFloat="true" layoutX="679.0" layoutY="115.0" prefHeight="29.0" prefWidth="125.0" promptText="Edad" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtNombre" focusColor="#0a8fb8" labelFloat="true" layoutX="38.0" layoutY="114.0" prefHeight="29.0" prefWidth="217.0" promptText="Nombre (s)" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="14.0" prefHeight="52.0" prefWidth="854.0" text="Recepción" textAlignment="CENTER" textFill="#ee4599" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <padding>
+                  <Insets left="13.0" right="13.0" />
+               </padding>
+            </Label>
+            <JFXTextField fx:id="txtApellidoPa" focusColor="#0a8fb8" labelFloat="true" layoutX="266.0" layoutY="115.0" prefHeight="29.0" prefWidth="190.0" promptText="Apellido paterno" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtApellidoMa" focusColor="#0a8fb8" labelFloat="true" layoutX="467.0" layoutY="116.0" prefHeight="29.0" prefWidth="200.0" promptText="Apellido materno" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtCalle" focusColor="#0a8fb8" layoutX="86.0" layoutY="199.0" prefHeight="29.0" prefWidth="152.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtNumero" focusColor="#0a8fb8" layoutX="313.0" layoutY="199.0" prefHeight="29.0" prefWidth="59.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="243.0" layoutY="210.0" text="Número:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="386.0" layoutY="210.0" text="Colonia:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="246.0" prefHeight="19.0" prefWidth="99.0" text="Municipio:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="622.0" layoutY="210.0" prefHeight="19.0" prefWidth="112.0" text="Código postal:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtColonia" focusColor="#0a8fb8" layoutX="457.0" layoutY="199.0" prefHeight="29.0" prefWidth="152.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="comboMunicipio" layoutX="124.0" layoutY="239.0" prefHeight="26.0" prefWidth="246.0" promptText="NINGUNO" />
+            <JFXRadioButton fx:id="rBtnCasado" layoutX="143.0" layoutY="169.0" mnemonicParsing="false" onAction="#getEdoCivil" style="-fx-background-color: #f2f2f2;" text="Casado">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnUnionLibre" layoutX="259.0" layoutY="169.0" mnemonicParsing="false" onAction="#getEdoCivil" style="-fx-background-color: #f2f2f2;" text="Unión libre">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnSoltero" layoutX="395.0" layoutY="169.0" mnemonicParsing="false" onAction="#getEdoCivil" style="-fx-background-color: #f2f2f2;" text="Soltero">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnHijos" layoutX="506.0" layoutY="169.0" mnemonicParsing="false" onAction="#getEdoCivil" style="-fx-background-color: #f2f2f2;" text="Hijos">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnJuridica" layoutX="27.0" layoutY="317.0" mnemonicParsing="false" onAction="#getAsesoria" text="Jurídica">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnFamiliar" layoutX="162.0" layoutY="317.0" mnemonicParsing="false" onAction="#getAsesoria" text="Familiar">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnPension" layoutX="302.0" layoutY="317.0" mnemonicParsing="false" onAction="#getAsesoria" text="Pensión A.">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnVoluntario" layoutX="27.0" layoutY="351.0" mnemonicParsing="false" onAction="#getAsesoria" text="D. Voluntario">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnNecesario" layoutX="162.0" layoutY="351.0" mnemonicParsing="false" onAction="#getAsesoria" text="D. Necesario">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnOrdCivil" layoutX="302.0" layoutY="350.0" mnemonicParsing="false" onAction="#getAsesoria" text="Ord. Civil">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnOtros" layoutX="28.0" layoutY="386.0" mnemonicParsing="false" onAction="#getAsesoria" text="Otros">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnMaltratoLeve" layoutX="480.0" layoutY="318.0" mnemonicParsing="false" onAction="#getMaltrato" text="Leve">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnMaltratoGrave" layoutX="577.0" layoutY="318.0" mnemonicParsing="false" onAction="#getMaltrato" text="Grave">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnMaltratoEmocional" layoutX="685.0" layoutY="319.0" mnemonicParsing="false" onAction="#getMaltrato" text="Emocional">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnMaltratoPatrimonial" layoutX="578.0" layoutY="351.0" mnemonicParsing="false" onAction="#getMaltrato" text="Patrimonial">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnMaltratoSexual" layoutX="481.0" layoutY="351.0" mnemonicParsing="false" onAction="#getMaltrato" text="Sexual">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnCitatorio" layoutX="112.0" layoutY="503.0" mnemonicParsing="false" onAction="#contraParte" style="-fx-background-color: #f2f2f2;" text="Citatorio">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnCavim" layoutX="260.0" layoutY="504.0" mnemonicParsing="false" onAction="#contraParte" style="-fx-background-color: #f2f2f2;" text="CAVIM">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnDenuncia" layoutX="388.0" layoutY="505.0" mnemonicParsing="false" onAction="#contraParte" style="-fx-background-color: #f2f2f2;" text="Denuncia">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rBtnComparecencia" layoutX="539.0" layoutY="505.0" mnemonicParsing="false" onAction="#contraParte" style="-fx-background-color: #f2f2f2;" text="Comparecencia">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXTextField fx:id="txtCodigoPostal" focusColor="#0a8fb8" layoutX="744.0" layoutY="199.0" prefHeight="29.0" prefWidth="62.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="39.0" layoutY="171.0" text="Estado civil:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtOcupacion" focusColor="#0a8fb8" labelFloat="true" layoutX="617.0" layoutY="159.0" prefHeight="29.0" prefWidth="190.0" promptText="Ocupación" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label alignment="CENTER" layoutX="39.0" layoutY="285.0" prefHeight="31.0" prefWidth="386.0" text="Asesoría:" textAlignment="CENTER">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="421.0" text="CONTRA PARTE:" textFill="#ee4599">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtConApeMa" focusColor="#0a8fb8" labelFloat="true" layoutX="456.0" layoutY="456.0" prefHeight="29.0" prefWidth="152.0" promptText="Apellido materno" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtConApellidoPa" focusColor="#0a8fb8" labelFloat="true" layoutX="291.0" layoutY="456.0" prefHeight="29.0" prefWidth="152.0" promptText="Apellido paterno" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtConNombre" focusColor="#0a8fb8" labelFloat="true" layoutX="42.0" layoutY="455.0" prefHeight="29.0" prefWidth="236.0" promptText="Nombre (s)" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtConOcupacion" focusColor="#0a8fb8" labelFloat="true" layoutX="622.0" layoutY="456.0" prefHeight="29.0" prefWidth="184.0" promptText="Ocupación" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="44.0" layoutY="533.0" text="Observaciones:" textFill="#0a8fb8">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="83.0" text="SOLICITANTE:" textFill="#ee4599">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtObservaciones" layoutX="42.0" layoutY="557.0" prefHeight="60.0" prefWidth="655.0" wrapText="true">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </TextArea>
+            <Label alignment="CENTER" layoutX="496.0" layoutY="284.0" prefHeight="31.0" prefWidth="313.0" text="Maltrato:" textAlignment="CENTER">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnAceptar" layoutX="719.0" layoutY="557.0" onAction="#botonAceptar" prefHeight="60.0" prefWidth="92.0" style="-fx-background-color: #48ab2d;" text="ACEPTAR" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <Line endX="100.0" layoutX="454.0" layoutY="347.0" opacity="0.56" rotate="90.0" scaleX="0.4" startX="-100.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="43.0" prefHeight="650.0" prefWidth="203.0" style="-fx-background-color: #0a8fb8;">
+         <children>
+            <Label layoutX="2.0" layoutY="14.0" prefHeight="92.0" prefWidth="200.0" text="Expediente virtual de niños, niñas y adolescentes victimas del maltrato" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="13.0" right="13.0" />
+               </padding>
+            </Label>
+            <JFXButton fx:id="btnFicha" layoutY="136.0" onAction="#verFicha" prefHeight="25.0" prefWidth="203.0" style="-fx-background-color: #0A88AF;" text="Ficha de atención" textFill="#fff3f3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnProcuraduria" layoutY="165.0" onAction="#verProcuraduria" prefHeight="25.0" prefWidth="203.0" style="-fx-background-color: #0A88AF;" text="Procuraduría" textFill="#fff3f3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnJuridicos" layoutY="193.0" onAction="#verJuridicos" prefHeight="25.0" prefWidth="203.0" style="-fx-background-color: #0A88AF;" text="Jurídicos" textFill="#fff3f3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane prefHeight="650.0" prefWidth="43.0" style="-fx-background-color: #F56FB2;" />
+      <Pane fx:id="pnlProcuraduria" layoutX="246.0" prefHeight="650.0" prefWidth="854.0" style="-fx-background-color: #F2F2F2;" visible="false">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="62.0" prefHeight="31.0" prefWidth="814.0" text="Procuraduría" textFill="#0a8fb8">
+               <font>
+                  <Font name="Century Gothic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="167.0" text="Calle:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtEdadP" focusColor="#0a8fb8" labelFloat="true" layoutX="679.0" layoutY="115.0" prefHeight="29.0" prefWidth="125.0" promptText="Edad" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtNombreP" focusColor="#0a8fb8" labelFloat="true" layoutX="38.0" layoutY="114.0" prefHeight="29.0" prefWidth="217.0" promptText="Nombre (s)" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="14.0" prefHeight="52.0" prefWidth="854.0" text="Recepción" textAlignment="CENTER" textFill="#ee4599" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <padding>
+                  <Insets left="13.0" right="13.0" />
+               </padding>
+            </Label>
+            <JFXTextField fx:id="txtApellidoPaP" focusColor="#0a8fb8" labelFloat="true" layoutX="266.0" layoutY="115.0" prefHeight="29.0" prefWidth="190.0" promptText="Apellido paterno" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtApellidoMaP" focusColor="#0a8fb8" labelFloat="true" layoutX="467.0" layoutY="116.0" prefHeight="29.0" prefWidth="200.0" promptText="Apellido materno" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtCalleP" focusColor="#0a8fb8" layoutX="86.0" layoutY="156.0" prefHeight="29.0" prefWidth="152.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtNumeroP" focusColor="#0a8fb8" layoutX="313.0" layoutY="156.0" prefHeight="29.0" prefWidth="59.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="243.0" layoutY="167.0" text="Número:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="386.0" layoutY="167.0" text="Colonia:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="203.0" prefHeight="19.0" prefWidth="99.0" text="Municipio:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="622.0" layoutY="167.0" prefHeight="19.0" prefWidth="112.0" text="Código postal:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtColoniaP" focusColor="#0a8fb8" layoutX="457.0" layoutY="156.0" prefHeight="29.0" prefWidth="152.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="comboMunicipioP" layoutX="124.0" layoutY="196.0" prefHeight="26.0" prefWidth="246.0" promptText="NINGUNO" />
+            <JFXTextField fx:id="txtCodigoPostalP" focusColor="#0a8fb8" layoutX="744.0" layoutY="156.0" prefHeight="29.0" prefWidth="62.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="39.0" layoutY="83.0" text="SOLICITANTE:" textFill="#ee4599">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="272.0" text="¿A QUIEN VISITA?" textFill="#ee4599">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="comboProcurador" layoutX="39.0" layoutY="297.0" prefHeight="26.0" prefWidth="509.0" promptText="NINGUNO" />
+            <Label layoutX="39.0" layoutY="383.0" text="OBSERVACIONES" textFill="#ee4599">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtObservacionesP" layoutX="38.0" layoutY="404.0" prefHeight="92.0" prefWidth="519.0" />
+            <JFXButton fx:id="btnAceptarP" layoutX="714.0" layoutY="554.0" onAction="#enviarDatosP" prefHeight="60.0" prefWidth="92.0" style="-fx-background-color: #48ab2d;" text="ACEPTAR" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane fx:id="pnlJuridicos" layoutX="246.0" prefHeight="650.0" prefWidth="854.0" style="-fx-background-color: #F2F2F2;" visible="false">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="61.0" prefHeight="31.0" prefWidth="814.0" text="Jurídicos" textFill="#0a8fb8">
+               <font>
+                  <Font name="Century Gothic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="167.0" text="Calle:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtEdadJ" focusColor="#0a8fb8" labelFloat="true" layoutX="679.0" layoutY="115.0" prefHeight="29.0" prefWidth="125.0" promptText="Edad" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtNombreJ" focusColor="#0a8fb8" labelFloat="true" layoutX="38.0" layoutY="114.0" prefHeight="29.0" prefWidth="217.0" promptText="Nombre (s)" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="14.0" prefHeight="52.0" prefWidth="854.0" text="Recepción" textAlignment="CENTER" textFill="#ee4599" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <padding>
+                  <Insets left="13.0" right="13.0" />
+               </padding>
+            </Label>
+            <JFXTextField fx:id="txtApellidoPaJ" focusColor="#0a8fb8" labelFloat="true" layoutX="266.0" layoutY="115.0" prefHeight="29.0" prefWidth="190.0" promptText="Apellido paterno" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtApellidoMaJ" focusColor="#0a8fb8" labelFloat="true" layoutX="467.0" layoutY="116.0" prefHeight="29.0" prefWidth="200.0" promptText="Apellido materno" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtCalleJ" focusColor="#0a8fb8" layoutX="86.0" layoutY="156.0" prefHeight="29.0" prefWidth="152.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtNumeroJ" focusColor="#0a8fb8" layoutX="313.0" layoutY="156.0" prefHeight="29.0" prefWidth="59.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="243.0" layoutY="167.0" text="Número:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="386.0" layoutY="167.0" text="Colonia:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="203.0" prefHeight="19.0" prefWidth="99.0" text="Municipio:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="622.0" layoutY="167.0" prefHeight="19.0" prefWidth="112.0" text="Código postal:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtColoniaJ" focusColor="#0a8fb8" layoutX="457.0" layoutY="156.0" prefHeight="29.0" prefWidth="152.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="comboMunicipioJ" layoutX="124.0" layoutY="196.0" prefHeight="26.0" prefWidth="246.0" promptText="NINGUNO" />
+            <JFXTextField fx:id="txtCodigoPostalJ" focusColor="#0a8fb8" layoutX="744.0" layoutY="156.0" prefHeight="29.0" prefWidth="62.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="39.0" layoutY="83.0" text="SOLICITANTE:" textFill="#ee4599">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="272.0" text="ASESOR JURIDICO" textFill="#ee4599">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="comboAsesor" layoutX="39.0" layoutY="297.0" prefHeight="26.0" prefWidth="509.0" promptText="NINGUNO" />
+            <Label layoutX="39.0" layoutY="383.0" text="OBSERVACIONES" textFill="#ee4599">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtObservacionesJ" layoutX="38.0" layoutY="404.0" prefHeight="92.0" prefWidth="519.0" />
+            <JFXButton fx:id="btnAceptarJ" layoutX="714.0" layoutY="554.0" onAction="#enviarDatosJ" prefHeight="60.0" prefWidth="92.0" style="-fx-background-color: #48ab2d;" text="ACEPTAR" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</Pane>

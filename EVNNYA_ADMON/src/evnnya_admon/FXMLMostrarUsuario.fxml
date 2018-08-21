@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="843.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="evnnya_admon.FXMLMostrarUsuarioController">
+   <children>
+      <Label alignment="CENTER" prefHeight="50.0" prefWidth="843.0" style="-fx-background-color: #0a8fb8;" text="Lista de usuarios" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tablaUsuarios" layoutX="33.0" layoutY="80.0" prefHeight="364.0" prefWidth="771.0" />
+   </children>
+</Pane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="EVNNYA_Reporte.jnlp">
+  <information>
+    <title>EVNNYA_Reporte</title>
+    <vendor>lucia</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="EVNNYA_Reporte.jar" size="16704" download="eager" />
+    <jar href="lib\LibreriaConeccionesEvnnya.jar" size="198729" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2401594" download="eager" />
+    <jar href="lib\sqljdbc42.jar" size="891490" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="EVNNYA_Reporte" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="evnnya_reporte.EVNNYA_Reporte"  name="EVNNYA_Reporte" />
+  <update check="always"/>
+</jnlp>

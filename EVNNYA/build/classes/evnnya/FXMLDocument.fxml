@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" pickOnBounds="false" prefHeight="360.0" prefWidth="664.0" style="-fx-background-color: #183e6b;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="evnnya.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutX="378.0" prefHeight="280.0" prefWidth="246.0" style="-fx-background-color: #0a8fb8;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="378.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <JFXTextField fx:id="txtUsuario" focusColor="WHITE" labelFloat="true" layoutX="32.0" layoutY="71.0" prefHeight="25.0" prefWidth="183.0" promptText="Usuario" style="-fx-text-fill: #fff; -fx-prompt-text-fill: #fff;" unFocusColor="#61d5ff" />
+            <JFXPasswordField fx:id="txtContrasena" focusColor="WHITE" labelFloat="true" layoutX="32.0" layoutY="128.0" prefHeight="25.0" prefWidth="183.0" promptText="Contraseña" style="-fx-text-fill: #fff; -fx-prompt-text-fill: #fff; fx-highlight-fill: #fff;" unFocusColor="#61d5ff" />
+            <JFXButton fx:id="btnAceptar" layoutX="32.0" layoutY="228.0" onAction="#handleLogin" prefHeight="30.0" prefWidth="183.0" ripplerFill="#ffffffc8" style="-fx-background-color: #61d5ff;" text="Aceptar" textFill="#183e6b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="82.0" layoutY="14.0" text="Ingresar" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <ImageView fx:id="ivClose" fitHeight="34.0" fitWidth="37.0" layoutX="626.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/ic_cerrar_ventana.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="629.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleClose" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: transparent; -fx-text-fill: transparent; -fx-border-fill: transparent;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView fitHeight="222.0" fitWidth="340.0" layoutX="14.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/evnnya_logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

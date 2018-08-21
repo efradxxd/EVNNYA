@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="evnnya_psic.FXMLBuscarController">
+   <children>
+      <Pane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #0a8fb8;">
+         <children>
+            <Label alignment="CENTER" layoutX="60.0" layoutY="11.0" prefHeight="40.0" prefWidth="483.0" text="Buscar anexo o formato enviado" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="60.0" prefHeight="340.0" prefWidth="600.0" style="-fx-background-color: #f2f2f2;">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="9.0" layoutY="-48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="97.0" layoutY="23.0" prefHeight="40.0" prefWidth="169.0" text="Ingrese folio del anexo:" textFill="#0a8fb8">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField alignment="CENTER" focusColor="#0a8fb8" layoutX="274.0" layoutY="29.0">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <TableView layoutX="83.0" layoutY="88.0" prefHeight="200.0" prefWidth="440.0">
+              <columns>
+                <TableColumn fx:id="tab_Folio" minWidth="100.0" prefWidth="75.0" text="Folio" />
+                <TableColumn fx:id="tab_NumeroExp" minWidth="200.0" prefWidth="75.0" text="Número de expediente" />
+                  <TableColumn fx:id="tab_Fecha" minWidth="140.0" prefWidth="75.0" text="Fecha" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnVerAnexo" layoutX="471.0" layoutY="31.0" onAction="#verAnexo" style="-fx-background-color: #48ab2d;" text="Ver" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="256.0" layoutY="297.0" style="-fx-background-color: #a3182f;" text="Cancelar" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</Pane>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="evnnya_psic.FXMLDatosPsicController">
+   <children>
+      <Pane prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #0a8fb8;">
+         <children>
+            <Label alignment="CENTER" layoutX="44.0" layoutY="12.0" prefHeight="47.0" prefWidth="505.0" text="Datos terapia psicológica" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="70.0" prefHeight="520.0" prefWidth="600.0" style="-fx-background-color: #F2F2F2;">
+         <children>
+            <Label layoutX="52.0" layoutY="23.0" prefHeight="30.0" prefWidth="185.0" text="Fecha de envio:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="55.0" prefHeight="30.0" prefWidth="194.0" text="Asesor jurídico:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="87.0" prefHeight="30.0" prefWidth="194.0" text="Número de expediente:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="183.0" prefHeight="30.0" prefWidth="185.0" text="Apellido materno:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="152.0" prefHeight="30.0" prefWidth="209.0" text="Apellido paterno:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="120.0" prefHeight="30.0" prefWidth="201.0" text="Nombre (s):">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="56.0" layoutY="344.0" prefHeight="30.0" prefWidth="201.0" text="Descripción:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txt_FechEnv" editable="false" focusColor="#0a8fb8" layoutX="235.0" layoutY="21.0" prefHeight="30.0" prefWidth="300.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txt_AsesJ" editable="false" focusColor="#0a8fb8" layoutX="236.0" layoutY="53.0" prefHeight="30.0" prefWidth="300.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txt_NomExp" editable="false" focusColor="#0a8fb8" layoutX="236.0" layoutY="85.0" prefHeight="30.0" prefWidth="300.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txt_Noms" editable="false" focusColor="#0a8fb8" layoutX="236.0" layoutY="118.0" prefHeight="30.0" prefWidth="300.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txt_ApeP" editable="false" focusColor="#0a8fb8" layoutX="236.0" layoutY="150.0" prefHeight="30.0" prefWidth="300.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txt_ApeM" editable="false" focusColor="#0a8fb8" layoutX="236.0" layoutY="181.0" prefHeight="30.0" prefWidth="300.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <TextArea fx:id="txt_Desc" editable="false" layoutX="53.0" layoutY="376.0" prefHeight="80.0" prefWidth="485.0" wrapText="true">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </TextArea>
+            <JFXButton fx:id="btnComenzarEvaluacion" layoutX="52.0" layoutY="470.0" onAction="#formatoTerapia" style="-fx-background-color: #48ab2d;" text="Comenzar evaluación" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txt_Grav" editable="false" focusColor="#0a8fb8" layoutX="236.0" layoutY="211.0" prefHeight="30.0" prefWidth="300.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="52.0" layoutY="213.0" prefHeight="30.0" prefWidth="185.0" text="Gravedad:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="244.0" prefHeight="30.0" prefWidth="185.0" text="ID paciente (opcional):">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txt_IdP" editable="false" focusColor="#0a8fb8" layoutX="236.0" layoutY="242.0" prefHeight="30.0" prefWidth="300.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txt_TipoP" editable="false" focusColor="#0a8fb8" layoutX="236.0" layoutY="272.0" prefHeight="30.0" prefWidth="300.0" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="52.0" layoutY="274.0" prefHeight="30.0" prefWidth="185.0" text="Tipo paciente(opcional):">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="423.0" layoutY="470.0" style="-fx-background-color: #a3182f;" text="Cancelar" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="58.0" layoutY="314.0" prefHeight="30.0" prefWidth="174.0" text="Estatus de la petición:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txt_EstP" alignment="CENTER" focusColor="#0a8fb8" layoutX="232.0" layoutY="314.0" prefHeight="30.0" prefWidth="300.0" promptText="Rellene estatus actual de la petición" unFocusColor="BLACK">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="372.0" layoutY="8.0" prefHeight="30.0" prefWidth="95.0" text="Folio terapia:">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="folio_vista" layoutX="467.0" layoutY="8.0" prefHeight="30.0" prefWidth="77.0" text="000000">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnGuardarCambios" layoutX="257.0" layoutY="470.0" onAction="#guardarCambios" style="-fx-background-color: #0a8fb8;" text="Guardar cambios" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</Pane>

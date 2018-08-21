@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane id="AnchorPane" prefHeight="600.0" prefWidth="1164.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="evnnya_coord_ases_jur.FXMLDocumentController">   
+    <children>
+        <Pane prefHeight="600.0" prefWidth="35.0" style="-fx-background-color: #F56FB2;">
+         <children>
+            <ImageView fitHeight="29.0" fitWidth="22.0" layoutX="6.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/observation.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="22.0" layoutX="6.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/send.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="22.0" layoutX="7.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/search.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="22.0" layoutX="8.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/exit.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane fx:id="pnl_reportes_nuevos" layoutX="186.0" prefHeight="600.0" prefWidth="978.0" style="-fx-background-color: #f2f2f2;">
+         <children>
+            <TableView layoutX="32.0" layoutY="74.0" prefHeight="451.0" prefWidth="920.0">
+              <columns>
+                <TableColumn minWidth="150.0" prefWidth="75.0" text="Número de reporte" />
+                <TableColumn minWidth="120.0" prefWidth="75.0" text="Fecha de recepción" />
+                <TableColumn minWidth="250.0" prefWidth="75.0" text="Nombre de la victima" />
+                <TableColumn minWidth="400.0" prefWidth="75.0" text="Vulneración de Derechos" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnActualizarNuevoReporte" layoutX="829.0" layoutY="37.0" onAction="#actualizarNuevoReporte" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #F56FB2; -fx-graphic: url('@images/close.png');" text="Actualizar tabla" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="105.0" layoutY="10.0" prefHeight="54.0" prefWidth="748.0" text="Nuevos reportes" textFill="#0a8fb8">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="544.0" prefHeight="29.0" prefWidth="172.0" text="Número de reporte:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="204.0" layoutY="544.0" prefHeight="29.0" prefWidth="172.0" text="-">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnAsignarAJ" layoutX="428.0" layoutY="543.0" onAction="#asignarAJ" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #48ab2d; -fx-graphic: url('@images/close.png');" text="Asignar AJ" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane fx:id="pnlNuevosReportes" layoutX="35.0" prefHeight="600.0" prefWidth="151.0" style="-fx-background-color: #0a8fb8;">
+         <children>
+            <JFXButton fx:id="btnReportesNuevos" alignment="TOP_LEFT" layoutY="96.0" onAction="#panelReportesNuevos" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #139BC4;" text="Nuevos reportes" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnReasignacionReportes" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="127.0" onAction="#verPanelReasignacion" prefHeight="54.0" prefWidth="151.0" style="-fx-background-color: #0a8fb8;" text="Reasignación de expedientes" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnVerReportes" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="181.0" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #0a8fb8;" text="Ver reportes" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnCerrarSesion" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="212.0" onAction="#panelReasignacionReportes" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #0a8fb8;" text="Cerrar sesión" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="80.0" fitWidth="140.0" layoutX="5.0" layoutY="6.0">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="pnlReasignacionReportes" layoutX="186.0" prefHeight="600.0" prefWidth="978.0" style="-fx-background-color: #f2f2f2;" visible="false">
+         <children>
+            <TableView layoutX="29.0" layoutY="73.0" prefHeight="429.0" prefWidth="918.0">
+               <columns>
+                  <TableColumn minWidth="220.0" prefWidth="75.0" text="Folio de resignación" />
+                  <TableColumn minWidth="300.0" prefWidth="75.0" text="Número expediente" />
+                  <TableColumn minWidth="300.0" prefWidth="75.0" text="Asesor jurídico" />
+                  <TableColumn minWidth="130.0" prefWidth="75.0" text="Fecha" />
+               </columns>
+            </TableView>
+            <JFXButton fx:id="btnActualizarReasignarRep" layoutX="832.0" layoutY="37.0" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #F56FB2;" text="Actualizar tabla" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="105.0" layoutY="10.0" prefHeight="54.0" prefWidth="748.0" text="Expedientes para reasignar " textFill="#0a8fb8">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="535.0" prefHeight="31.0" prefWidth="204.0" text="Número de expediente:">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnReasignarReporte" layoutX="614.0" layoutY="536.0" onAction="#panelReasignacionReportes" style="-fx-background-color: #48ab2d;" text="Reasignar expediente" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="226.0" layoutY="535.0" prefHeight="31.0" prefWidth="380.0">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+    </children>
+</Pane>
